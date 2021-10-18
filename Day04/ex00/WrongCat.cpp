@@ -2,7 +2,7 @@
 
 void WrongCat::makeSound() const
 {
-	std::cout << "CHEEEEeeeeeech !" << std::endl;
+	std::cout << "Miaou" << std::endl;
 }
 
 WrongCat::WrongCat(/* args */): WrongAnimal("WrongCat")

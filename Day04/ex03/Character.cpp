@@ -24,7 +24,7 @@ Character::Character(Character const &instance)
 			delete _matTab[i];
 	}
 	for (int i = 0; i < 4; i++)
-		_matTab[i] = instance._matTab[i];
+		_matTab[i] = instance._matTab[i]->clone();
 }
 
 Character::~Character()

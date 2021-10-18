@@ -8,7 +8,7 @@ class WrongCat : virtual public WrongAnimal
 private:
 	/* data */
 public:
-	virtual void makeSound() const;
+	void makeSound() const;
 	WrongCat(/* args */);
 	~WrongCat();
 };

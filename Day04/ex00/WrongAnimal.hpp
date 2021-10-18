@@ -10,7 +10,7 @@ private:
 public:
 	std::string getType() const;
 
-	virtual void makeSound() const;
+	void makeSound() const;
 	WrongAnimal();
 	WrongAnimal(std::string type);
 	~WrongAnimal();
