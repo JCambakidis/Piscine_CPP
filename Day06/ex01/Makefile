@@ -6,7 +6,7 @@
 #    By: jcambaki <jcambaki@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/24 13:37:35 by jcambaki          #+#    #+#              #
-#    Updated: 2021/10/19 06:49:05 by jcambaki         ###   ########.fr        #
+#    Updated: 2021/10/19 09:20:13 by jcambaki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,13 @@ CO_DELET = \033[3;31m
 CO_A_OUT = \033[96m
 WHITE = \033[1;49;97m
 
-INCLUDES	=	./Bureaucrat.hpp ./Form.hpp ./ShrubberyCreationForm.hpp ./RobotomyRequestForm.hpp ./PresidentialPardonForm.hpp ./Intern.hpp
+INCLUDES	=	
 
-NAME		= 	Bureaucrat
+NAME		= 	serialization
 
 CFLAGS		= 	-Wall -Wextra -Werror
 
-SRCS		=	./main.cpp ./Bureaucrat.cpp ./Form.cpp ./ShrubberyCreationForm.cpp ./RobotomyRequestForm.cpp ./PresidentialPardonForm.cpp ./Intern.cpp
+SRCS		=	./main.cpp
 
 OBJS		= 	$(SRCS:.c=.o)
 
