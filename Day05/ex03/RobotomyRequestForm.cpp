@@ -39,6 +39,8 @@ RobotomyRequestForm &	RobotomyRequestForm::operator=(RobotomyRequestForm const &
 
 void	RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
+
+	srand(time(0));
 	Form::execute(executor);
 	if (rand() & 1)
 		std::cout << getName() << " has been robotised !!" << std::endl;
