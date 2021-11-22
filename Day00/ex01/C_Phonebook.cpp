@@ -73,7 +73,7 @@ std::string	strlen_checker(std::string str)
 	return str;
 }
 
-void	show_contact(Contact contact, int index)
+void	show_contacts(Contact contact, int index)
 {
 
 	std::cout << std::right << std::setw(10) << index << "|";
@@ -82,13 +82,21 @@ void	show_contact(Contact contact, int index)
 	std::cout << std::setw(10) << strlen_checker(contact.getnickname()) << std::endl;
 }
 
+void	show_contact_information(Contact contact)
+{
+	std::cout << "First name : " << contact.getfirstname() << std::endl;
+	std::cout << "Last name : " << contact.getlastname() << std::endl;
+	std::cout << "Nickname : " << contact.getnickname() << std::endl;
+	std::cout << "Phone number: " << contact.getphone_number() << std::endl;
+	std::cout << "Darkest secret : " << contact.getdarkest_secret() << std::endl;
+}
+
 void	Phonebook::search_contact(void)
 {
 	std::string	line;
-
 	std::cout << "index     |" << "first name|" << "last name |" << "nickname  " << std::endl;
 	for (int i = 0; i < this->contact_count; i++)
-		show_contact(this->_contact_list[i], i);
+		show_contacts(this->_contact_list[i], i);
 	while (1)
 	{
 		std::cout << "Enter index of contact you want to see" << std::endl;
@@ -100,8 +108,7 @@ void	Phonebook::search_contact(void)
 			std::cout << "Index not valid" << std::endl;
 		else
 		{
-			std::cout << "index     |" << "first name|" << "last name |" << "nickname  " << std::endl;
-			show_contact(this->_contact_list[tmp], tmp);
+			show_contact_information(this->_contact_list[tmp]);
 			break ;
 		}
 
